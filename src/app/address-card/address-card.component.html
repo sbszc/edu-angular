@@ -1,0 +1,14 @@
+<div>
+    <h1>Adress Card</h1>
+    <p>{{user.name}}</p>
+    <p>{{user.address}}</p>
+    <div *ngIf='user.phones.length'>
+        <button (click)='toggleCollapse()'>{{toggleCollapseText}}</button>
+        <div *ngIf='!isCollapsed'>
+            <h4>phones</h4>
+            <p *ngFor='let phone of user.phones'>
+                {{phone}}
+            </p>
+        </div>
+    </div>
+</div>

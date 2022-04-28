@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from './address-card/user.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'edu-angular';
+  
+  user = new User('sbszcc', 'mydir 0-0', [111, 222])
+  inputText = 'two way binding'
+
+  constructor() {
+  }
 }
